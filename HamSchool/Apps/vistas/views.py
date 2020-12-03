@@ -26,7 +26,7 @@ def login_request(request):
                 messages.error(request, "Usuario o Contraseña invalidad")           
             
     form = AuthenticationForm()
-    return render(request, "vistas/login/login.html")
+    return render(request, "vistas/Login/login.html")
 
 
 
