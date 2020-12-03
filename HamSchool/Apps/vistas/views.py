@@ -29,8 +29,7 @@ def login_request(request):
     return render(request, "vistas/Login/login.html")
 
 
-def tabla (request):
-    return render (request, "vistas/tabla.html")
+
 
 def index_request (request):
     return render (request, "vistas/index.html")
@@ -124,3 +123,10 @@ def register_request (request):
     return render(request, "vistas/Login/register.html", data) 
 
 
+def tabla(request):
+    usuarios = Usuario.objects.all()
+    
+    data = {
+            'usuarios': usuarios
+    }
+    return render (request, "vistas/tabla.html")
