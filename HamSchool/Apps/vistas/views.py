@@ -29,7 +29,7 @@ def login_request(request):
     return render(request, "vistas/Login/login.html")
 
 
-def lista (request):
+def tabla (request):
     return render (request, "vistas/tabla.html")
 
 def index_request (request):
