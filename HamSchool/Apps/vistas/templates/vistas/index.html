@@ -37,7 +37,7 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <a class="btn btn-danger my-2 my-sm-0" href="login">Log out</a>
+      <a class="btn btn-danger my-2 my-sm-0" href="login">Log out, {{ user.username }}?</a>
     </form>
   </div>
 </nav>
@@ -51,7 +51,10 @@
 			<hr/>
 			<div class="ham_cont_banner_link">
 				<a class="ham_banner_link" href="cursos">Courses</a>
-				<a class="ham_banner_link2" href="about_us">About us</a>
+        <a class="ham_banner_link2" href="about_us">About us</a>
+        {% if perms.HamSchool.view_usuarios %}
+        <a class="ham_banner_link2" href="lista">Registered students</a>
+        {% endif %}
 			</div>
 		</div>
 	</div>
@@ -84,7 +87,8 @@
         Ham-School provides basic knowledge at the preschool-secondary level 
         to expand or learn a new language that would be English. Our website 
         will have educational games and images that will facilitate children's 
-        understanding of the language.</p>
+        understanding of the language.
+      </p>
       </div>
       <div class="col-md-6">
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/UFaMBm8-7mQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
