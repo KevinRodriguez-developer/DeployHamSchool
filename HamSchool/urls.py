@@ -31,7 +31,7 @@ urlpatterns = [
     path('', views.login_request, name="login"),
     path('login', views.login_request, name="login"),
     path('reset_password/login', views.login_request, name="login"),
-    path('tabla', views.tabla, name="tabla"),
+    path('tabla', views.lista_usuarios, name="tabla"),
 
     path('register', views.register_request, name="register"),
     path('reset_password/register', views.register_request, name="register"),

@@ -123,10 +123,10 @@ def register_request (request):
     return render(request, "vistas/Login/register.html", data) 
 
 
-def tabla(request):
+def lista_usuarios(request):
     usuarios = Usuario.objects.all()
     
     data = {
             'usuarios': usuarios
     }
-    return render (request, "vistas/tabla.html")
+    return render(request, "vistas/tabla.html", data)
