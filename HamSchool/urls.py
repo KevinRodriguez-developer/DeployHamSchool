@@ -31,7 +31,7 @@ urlpatterns = [
     path('', views.login_request, name="login"),
     path('login', views.login_request, name="login"),
     path('reset_password/login', views.login_request, name="login"),
-    
+    path('lista', wiews.lista, name="listas"),
 
     path('register', views.register_request, name="register"),
     path('reset_password/register', views.register_request, name="register"),
